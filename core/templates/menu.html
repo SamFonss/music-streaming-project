@@ -1,3 +1,8 @@
+<!--
+    This template displays the menu page.
+    It guides guest users to the browse page, and allows users with upload permissions to either visit the browse or upload page.
+-->
+
 <h1>Welcome{% if is_guest %}, Guest{% else %}, {{ user.username }}{% endif %}!</h1>
 <ul>
     <li><a href="{% url 'browse' %}">Browse Files</a></li>
