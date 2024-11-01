@@ -1,0 +1,10 @@
+<h2>Admin Login</h2>
+<form method="post"> 	
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Login</button>
+</form>
+<a href="{% url 'password_reset' %}">Forgot Password?</a>
+
+<p>Or</p>
+<a href="{% url 'menu' %}?guest=true">Continue as Guest</a>

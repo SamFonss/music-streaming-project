@@ -1,0 +1,9 @@
+<h1>Welcome{% if is_guest %}, Guest{% else %}, {{ user.username }}{% endif %}!</h1>
+<ul>
+    <li><a href="{% url 'browse' %}">Browse Files</a></li>
+    {% if can_upload %}
+        <li><a href="{% url 'upload' %}">Upload Files</a></li>
+    {% else %}
+        <li>Thank you for visiting my website!</li>
+    {% endif %}
+</ul>
