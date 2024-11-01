@@ -1,5 +1,5 @@
 # Music Streaming System with Network Optimization
-Welcome to my Music Streaming System repository! This project is a music streaming platform that allows users to upload, stream, and download audio files. It is designed to optimize network efficiency using routing protocols and network monitoring, ideal for users interested in high-performance audio streaming.
+Welcome to my Music Streaming System repository! This project was created to test my skills and host recordings of my own music. It is designed to optimize network efficiency using routing protocols and network monitoring.
 
 **Features**
 
