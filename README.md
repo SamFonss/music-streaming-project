@@ -1,37 +1,43 @@
 # Music Streaming System with Network Optimization
 Welcome to my Music Streaming System repository! This project is a music streaming platform that allows users to upload, stream, and download audio files. It is designed to optimize network efficiency using routing protocols and network monitoring, ideal for users interested in high-performance audio streaming.
 
-**Features**
+# Features
 
-```
-User Authentication: Secure login system with permissions management to control user access levels (view-only, upload permissions, guest access).
+**User Authentication**: Secure login system with permissions management to control user access levels (view-only, upload permissions, guest access).
 
-Audio Upload and Streaming: Users can upload audio files and stream files directly from the platform.
+**Audio Upload and Streaming**: Users can upload audio files and stream files directly from the platform.
 
-Download Functionality: Users can download audio files from the server.
+**Download Functionality**: Users can download audio files from the server.
 
-Network Optimization: Incorporates BGP/OSPF concepts to ensure optimized routing and efficient data flow.
+**Network Optimization**: Incorporates BGP/OSPF concepts to ensure optimized routing and efficient data flow.
 
-Automated Traffic Monitoring: Scripts for real-time monitoring of network traffic to maintain and troubleshoot optimal performance.
-```
+**Automated Traffic Monitoring**: Scripts for real-time monitoring of network traffic to maintain and troubleshoot optimal performance.
 
 
 **Project Structure**
 
 ```
-music_streaming_project/
+music_streaming/
 │
 ├── core/
+│   ├── templates/
+│   │   ├── registration/
+│   │   │   ├── login.html            # Login page
+│   │   │   ├── password_change.html  # Password change page
+│   │   │   └── password_reset.html   # Password reset page
+│   │   │
+│   │   ├── menu.html             # Main menu for browsing/uploading files
+│   │   ├── upload.html           # File upload page
+│   │   └── browse.html           # File browsing and streaming page
+│   │         
 │   ├── models.py             # Database models, including audio file metadata
 │   ├── views.py              # Views for file upload, browsing, and streaming
 │   └── forms.py              # Forms for user inputs and file uploads
-│
-├── templates/
-│   ├── login.html            # Login page
-│   ├── menu.html             # Main menu for browsing/uploading files
-│   ├── upload.html           # File upload page
-│   └── browse.html           # File browsing and streaming page
-│
+│   
+├── music_streaming/
+│   ├── settings.py           # Django project configuration settings
+│   └── urls.py               # Project URL routing 
+│ 
 ├── manage.py                 # Django project management tool
 ├── README.md                 # Project documentation
 └── requirements.txt          # Dependencies
