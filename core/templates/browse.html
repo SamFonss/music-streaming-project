@@ -1,0 +1,27 @@
+<h1>Welcome{% if is_guest %}, Guest{% else %}, {{ user.username }}{% endif %}!</h1>
+
+<h2>Browse Sam's Music</h2>
+<ul>
+    {% if audio_files %}
+        {% for media in audio_files %}
+            <li>
+                <strong>{{ media.title }}</strong> - 
+                <a href="{{ audio.file.url }}" download>Download</a> - <br>
+		<audio controls>
+             		<source src="{{ media.mp3_url }}" type="audio/mpeg"> <!-- For MP3 -->
+               		<source src="{{ media.wav_url }}" type="audio/wav"> <!-- For WAV -->
+               		<source src="{{ media.m4a_url }}" type="audio/mp4"> <!-- For M4A -->
+                	Your browser does not support the audio tag.
+           	</audio> <br>
+                Uploaded on: {{ media.uploaded_at }}
+            </li>
+        {% endfor %}
+    {% else %}
+        <li>No audio files uploaded yet.</li>
+    {% endif %}
+</ul>
+
+<ul>
+    <li><a href="{% url 'menu' %}">Back to Menu</a></li>
+    <li><a href="{% url 'logout' %}">Logout</a></li>
+</ul>

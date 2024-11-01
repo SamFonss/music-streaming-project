@@ -36,5 +36,20 @@ def menu(request):
     return render(request, 'menu.html', {'can_upload': can_upload, 'is_guest': is_guest})
 
 def browse(request):
+
+    audio_files = AudioFile.objects.all()  # Retrieve all audio files
+    audio_files_with_formats = []
     
-    return render(request, 'browse.html')
+    for media in audio_files:
+        # Generate URLs for each format
+        audio_data = {
+            'title': media.title,
+            'artist' : media.artist,
+            'uploaded_at': media.uploaded_at,
+            'mp3_url': media.file.url,
+            'wav_url': media.file.url.replace('.mp3', '.wav'),
+            'm4a_url': media.file.url.replace('.mp3', '.m4a'),  
+        }
+        audio_files_with_formats.append(audio_data)
+        
+    return render(request, 'browse.html', {'audio_files': audio_files_with_formats})

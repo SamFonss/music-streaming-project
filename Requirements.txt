@@ -1,0 +1,4 @@
+Python 3.8+
+Django 4.0+
+PostgreSQL (with initial setup for network optimization testing)
+Git for version control
