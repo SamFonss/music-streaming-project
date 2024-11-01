@@ -19,19 +19,27 @@ Automated Traffic Monitoring: Scripts for real-time monitoring of network traffi
 **Project Structure**
 
 ```
-music_streaming_project/
+music_streaming/
 │
 ├── core/
+│   ├── templates/
+│   │   ├── registration/
+│   │   │   ├── login.html            # Login page
+│   │   │   ├── password_change.html  # Password change page
+│   │   │   └── password_reset.html   # Password reset page
+│   │   │
+│   │   ├── menu.html             # Main menu for browsing/uploading files
+│   │   ├── upload.html           # File upload page
+│   │   └── browse.html           # File browsing and streaming page
+│   │         
 │   ├── models.py             # Database models, including audio file metadata
 │   ├── views.py              # Views for file upload, browsing, and streaming
 │   └── forms.py              # Forms for user inputs and file uploads
-│
-├── templates/
-│   ├── login.html            # Login page
-│   ├── menu.html             # Main menu for browsing/uploading files
-│   ├── upload.html           # File upload page
-│   └── browse.html           # File browsing and streaming page
-│
+│   
+├── music_streaming/
+│   ├── settings.py           # Django project configuration settings
+│   └── urls.py               # Project URL routing 
+│ 
 ├── manage.py                 # Django project management tool
 ├── README.md                 # Project documentation
 └── requirements.txt          # Dependencies
