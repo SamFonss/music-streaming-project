@@ -109,7 +109,7 @@ Continue as a guest to browse files without upload permissions.
 
 **Uploading and Streaming**
 
-Logged-in users with upload permissions can add audio files to the platform.
+Logged-in users with upload permissions can add (and remove via the browse page) audio files to the platform.
 All users can stream and download audio files.
 
 **Network Optimization**
