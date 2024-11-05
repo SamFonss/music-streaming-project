@@ -11,9 +11,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 # App imports
-from core.views import upload_file
-from core.views import menu
-from core.views import browse
+from core.views import login_view, upload_file, menu, browse, delete_file
 
 
 urlpatterns = [
@@ -29,6 +27,7 @@ urlpatterns = [
     path('upload/', upload_file, name='upload'),
     path('menu/', menu, name='menu'),
     path('browse/', browse, name='browse'),
+    path('delete/<int:file_id>/', delete_file, name='delete_file'),
 
 ]
 
