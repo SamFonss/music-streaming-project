@@ -52,27 +52,31 @@ Django 4.0+
 PostgreSQL (with initial setup for network optimization testing)
 Git for version control
 ```
+
 # Installation
 
-**Clone the Repository
-**
+**Clone the Repository**
+
 ```
 git clone https://github.com/SamFonss/music-streaming-project.git
 cd music-streaming-project
 ```
-**Create a Virtual Environment
-**
+
+**Create a Virtual Environment**
+
 ```
 python3 -m venv venv
 source venv/bin/activate
 ```
-**Install Dependencies
-**
+
+**Install Dependencies**
+
 ```
 pip install -r requirements.txt
 ```
-**Set Up Database
-**
+
+**Set Up Database**
+
 Configure PostgreSQL in settings.py:
 
 ```
@@ -87,16 +91,19 @@ DATABASES = {
     }
 }
 ```
-**Apply Migrations
-**
+
+**Apply Migrations**
+
 ```
 python manage.py migrate
 ```
-**Run the Server
-**
+
+**Run the Server**
+
 ```
 python manage.py runserver
 ```
+
 # Usage
 
 **User Registration and Login**
